@@ -4,23 +4,18 @@ This material was formerly hosted at https://gist.github.com/domfarolino/359a01b
 
 ```
 git rebase-update && gclient sync
-ninja -C out/Debug blink_tests | chrome | content_browsertests | blink_unittests | blink_platform_unittests
+autoninja -C out/Default chrome blink_tests browser_tests content_browsertests net_unittests
 ```
 ## Testing
 
 ### Google Tests
 
-The `blink_platform_unittests` and `blink_unittests` (previously `webkit_unit_tests`) targets:
+Example: the `blink_platform_unittests` and `blink_unittests` (previously `webkit_unit_tests`) targets:
 
 ```
-./out/Debug/blink_unittests --gtest_filter=HTMLPreloadScannerDocumentTest.XHRResponseDocument
-./out/Debug/blink_platform_unittests --gtest_filter=ResourceFetcherTest.UseExistingResource
-```
-
-The `browser_tests` target:
-
-```
-./out/Debug/browser_tests --gtest_filter=DevToolsSanityTest.TestRawHeadersWithRedirectAndHSTS
+./out/Debug/blink_unittests --gtest_filter="HTMLPreloadScannerDocumentTest.XHRResponseDocument"
+./out/Debug/blink_platform_unittests --gtest_filter="ResourceFetcherTest.UseExistingResource"
+./out/Debug/blink_platform_unittests --gtest_filter="ResourceFetcherTest.*"
 ```
 
 Useful Google Test Flags:
@@ -29,8 +24,21 @@ Useful Google Test Flags:
 --test-launcher-retry-limit=0
 ```
 
+Multiple [inclusions/exclusions](https://stackoverflow.com/questions/14018434):
+
+```
+--gtest_filter="POSITIVE_PATTERNS:AND_MORE[-NEGATIVE_PATTERNS:AND_MORE]"
+```
+
+Example:
+
+```
+--gtest_filter="ResourceFetcherTest.*-ResourceFetcherTest.StartLoadAfterFrameDetach:ResourceFetcherTest.Vary"
+```
+
 ### Layout Tests:
+
 Running layout tests:
 ```
-python third_party/blink/tools/run_web_tests.py -t Debug --no-retry-failures http/tests/security/referrer-policy-conflicting-policies.html
+python third_party/blink/tools/run_web_tests.py -t Debug --no-retry-failures http/tests/security/referrer-policy-conflicting-policies.html external/wpt/workers
 ```

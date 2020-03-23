@@ -77,7 +77,15 @@ Example:
 --gtest_filter="ResourceFetcherTest.*-ResourceFetcherTest.StartLoadAfterFrameDetach:ResourceFetcherTest.Vary"
 ```
 
-### Layout Tests:
+### WPTS & Layout Tests:
+
+ - [WPT local setup](https://web-platform-tests.org/running-tests/from-local-system.html#system-setup)
+ - [Trusting root CA](https://web-platform-tests.org/tools/certs/README.html)
+   - To easily get `https` tests working locally
+ - [testharness.js API](https://web-platform-tests.org/writing-tests/testharness-api.html)
+   - Super useful to learn testharness APIs i.e., that `promise_test`s run sequentially,
+     how to use `t.step_func()`, or the difference between `add_result_callback()` and
+     `add_completion_callback()`. Also it is not super easy to find for some reason I think
 
 Running layout tests:
 ```

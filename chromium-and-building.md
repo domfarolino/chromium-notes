@@ -77,7 +77,10 @@ Example:
 --gtest_filter="ResourceFetcherTest.*-ResourceFetcherTest.StartLoadAfterFrameDetach:ResourceFetcherTest.Vary"
 ```
 
-#### WPTS & Layout Tests:
+#### WPTs & Layout Tests:
+
+ - [WPT](http://github.com/web-platform-tests/wpt) docs
+ - [Chromium "web tests"](https://chromium.googlesource.com/chromium/src/+/master/docs/testing/web_tests.md#Running-Web-Tests) docs
 
  - [WPT local setup](https://web-platform-tests.org/running-tests/from-local-system.html#system-setup)
  - [Trusting root CA](https://web-platform-tests.org/tools/certs/README.html)
@@ -101,3 +104,19 @@ Useful flags:
      your machine may start many content shells and _quickly_ reduce the number, slowing down
      the run. This flag forces the machine to use as many content shells as it would for an
      enormous number of tests, all the way through the end.
+
+The last set of test results are always available at:
+
+```
+file:///Users/domfarolino/Desktop/Git/chromium/src/out/Debug/layout-test-results/results.html
+```
+
+## Misc
+
+ - [DISABLE GIT PROMPT IN OH MY ZSH](https://www.stevenrombauts.be/2018/04/disable-git-prompt-in-oh-my-zsh/)
+ - [VIM substitution syntax](https://codeyarns.com/2014/10/31/how-to-replace-from-current-line-in-vim/):
+   - `:%s/old/new/gc`
+     - (`g` = global, `c` = ask for confirmation on each one)
+     - Performs substitution for the whole file. To do
+   - `:,$s/old/new/gc`
+     - Performs substitution from current line. See why in the doc above

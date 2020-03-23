@@ -81,5 +81,15 @@ Example:
 
 Running layout tests:
 ```
-python third_party/blink/tools/run_web_tests.py -t Debug --no-retry-failures http/tests/security/referrer-policy-conflicting-policies.html external/wpt/workers
+python third_party/blink/tools/run_web_tests.py -t Debug http/tests/security/referrer-policy-conflicting-policies.html external/wpt/workers
 ```
+
+Useful flags:
+ - `--no-retry-failures`
+ - `--fully-parallel`
+   - When running WPTs, your machine spins up an "appropriate" number of content shells
+     for parallelization. As the number of remaining WPTs decrease, your machine decreases
+     the number of content shells running in parallel. Even when running up to ~80 tests,
+     your machine may start many content shells and _quickly_ reduce the number, slowing down
+     the run. This flag forces the machine to use as many content shells as it would for an
+     enormous number of tests, all the way through the end.

@@ -2,7 +2,7 @@
 
 This material was formerly hosted at https://gist.github.com/domfarolino/359a01b65241cbebf1224b666c9d89fd.
 
-### GN Args / Build Configuration
+#### GN Args / Build Configuration
 
  - [Linux Build Instructions](https://chromium.googlesource.com/chromium/src/+/master/docs/linux/build_instructions.md)
  - [macOS Build Instructions](https://chromium.googlesource.com/chromium/src/+/master/docs/mac_build_instructions.md)
@@ -20,7 +20,7 @@ dcheck_always_on = true
 enable_nacl = false
 ```
 
-### Common commands and targets
+#### Common commands and targets
 ```
 $ git rebase-update && gclient sync
 $ autoninja -C out/Default chrome blink_tests browser_tests content_browsertests net_unittests
@@ -49,7 +49,7 @@ you might also need to follow the above lldbinit instructions for the root user'
 
 ## Testing
 
-### Google Tests
+#### Google Tests
 
 Example: the `blink_platform_unittests` and `blink_unittests` (previously `webkit_unit_tests`) targets:
 
@@ -77,7 +77,7 @@ Example:
 --gtest_filter="ResourceFetcherTest.*-ResourceFetcherTest.StartLoadAfterFrameDetach:ResourceFetcherTest.Vary"
 ```
 
-### WPTS & Layout Tests:
+#### WPTS & Layout Tests:
 
  - [WPT local setup](https://web-platform-tests.org/running-tests/from-local-system.html#system-setup)
  - [Trusting root CA](https://web-platform-tests.org/tools/certs/README.html)

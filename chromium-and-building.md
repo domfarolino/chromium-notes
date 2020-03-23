@@ -2,10 +2,51 @@
 
 This material was formerly hosted at https://gist.github.com/domfarolino/359a01b65241cbebf1224b666c9d89fd.
 
+### GN Args / Build Configuration
+
+ - [Linux Build Instructions](https://chromium.googlesource.com/chromium/src/+/master/docs/linux/build_instructions.md)
+ - [macOS Build Instructions](https://chromium.googlesource.com/chromium/src/+/master/docs/mac_build_instructions.md)
+ - [GN build configuration docs](https://www.chromium.org/developers/gn-build-configuration)
+
+My GN args:
+
 ```
-git rebase-update && gclient sync
-autoninja -C out/Default chrome blink_tests browser_tests content_browsertests net_unittests
+# Set build arguments here. See `gn help buildargs`.
+use_goma = true
+is_debug = true
+symbol_level = 2
+blink_symbol_level = 2
+dcheck_always_on = true
+enable_nacl = false
 ```
+
+### Common commands and targets
+```
+$ git rebase-update && gclient sync
+$ autoninja -C out/Default chrome blink_tests browser_tests content_browsertests net_unittests
+```
+
+When using Goma, it can be convenient to still be able to perform incremental builds
+without internet access. To avoid having to switch the GN arg `use_goma = false` and
+recompiling entirely, you can just use the following in the terminal:
+
+```
+export GOMA_DISABLED=true
+```
+
+## Debugging
+
+The LLDB debugger for macOS is what I primarily use. Historically just invoking
+`lldb ./out/Debug/binary_here` was enough to debug Chromium, however now we must
+also follow the [lldbinit docs](https://chromium.googlesource.com/chromium/src/+/master/docs/lldbinit.md).
+
+Also, for some reason to attach `lldb` to the Network Service process you must
+[run `lldb` as root](https://groups.google.com/a/chromium.org/forum/#!topic/network-service-dev/QzPyRlxm_1A).
+This means your lldb will be consulting the root user's `~/.lldbinit` file, so
+you might also need to follow the above lldbinit instructions for the root user's
+`~/.lldbinit` too.
+
+
 ## Testing
 
 ### Google Tests

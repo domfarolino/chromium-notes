@@ -110,13 +110,3 @@ The last set of test results are always available at:
 ```
 file:///Users/domfarolino/Desktop/Git/chromium/src/out/Debug/layout-test-results/results.html
 ```
-
-## Misc
-
- - [DISABLE GIT PROMPT IN OH MY ZSH](https://www.stevenrombauts.be/2018/04/disable-git-prompt-in-oh-my-zsh/)
- - [VIM substitution syntax](https://codeyarns.com/2014/10/31/how-to-replace-from-current-line-in-vim/):
-   - `:%s/old/new/gc`
-     - (`g` = global, `c` = ask for confirmation on each one)
-     - Performs substitution for the whole file. To do
-   - `:,$s/old/new/gc`
-     - Performs substitution from current line. See why in the doc above

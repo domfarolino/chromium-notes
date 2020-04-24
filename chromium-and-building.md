@@ -81,7 +81,6 @@ Example:
 
  - [WPT](http://github.com/web-platform-tests/wpt) docs
  - [Chromium "web tests"](https://chromium.googlesource.com/chromium/src/+/master/docs/testing/web_tests.md#Running-Web-Tests) docs
-
  - [WPT local setup](https://web-platform-tests.org/running-tests/from-local-system.html#system-setup)
  - [Trusting root CA](https://web-platform-tests.org/tools/certs/README.html)
    - To easily get `https` tests working locally

@@ -109,3 +109,22 @@ The last set of test results are always available at:
 ```
 file:///Users/domfarolino/Desktop/Git/chromium/src/out/Debug/layout-test-results/results.html
 ```
+
+##### Testharness notes / useful things:
+
+If you want to use a cross-origin in a test, you have two options:
+
+1. Sub test
+   - Make the test name of the format `test-name.sub.html` or `test-name.sub.https.html`
+   - This makes the test run through the server-side substitutor(?) before it is served
+   - Therefore you can use things like the following to create origins:
+     - `http://{{domains[www1]}}:{{ports[http][0]}}/html/`
+     - `http://{{domains[wwww]}}:{{ports[https][0]}}/html/`
+1. Import the `get-host-info` helper
+   - `<script src="/common/get-host-info.sub.js"></script>`
+   - `URL(get_host_info().HTTPS_REMOTE_ORIGIN + '/worklets/resources/referrer-checker.py');`
+
+Image progressive rendering. There exists a python resource that responds with a
+progressively-rendered image, at `/element-timing/resources/progressive-image.py`. You can
+see it being used in the following CL:
+`https://chromium-review.googlesource.com/c/chromium/src/+/2138994/3/third_party/blink/web_tests/external/wpt/preload/subresource-integrity-partial-image.html#25`.

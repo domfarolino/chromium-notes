@@ -46,6 +46,29 @@ This means your lldb will be consulting the root user's `~/.lldbinit` file, so
 you might also need to follow the above lldbinit instructions for the root user's
 `~/.lldbinit` too.
 
+### Debugging a renderer process
+
+If you want to debug a renderer process, you have two choices:
+
+ - Run Chrome as usual, then go to HamburgerMenu > More Tools > Task Manager,
+   use the pid of the renderer process of interest for LLDB
+ - If you need to debug something in a renderer's initialization code that you
+   can't attach a breakpoint to quick enough, launch Chrome with the
+   `--renderer-startup-dialog` flag. This will spit out a pid in the terminal
+   for the renderer that was created, that you can use as the pid for LLDB
+
+### Debugging the browser process
+
+Like before, you have a few choices:
+
+ - Run Chrome as usual, then go to HamburgerMenu > More Tools > Task Manager,
+   use the pid of the browser process for LLDB.
+ - If you need to debug something early in the browser process's initialization
+   code that you can't attach a breakpoint to quick enough, you have two options:
+    - Add `sleep(20);` somewhere in `content/app/content_main_runner_impl.cc`
+    - jbroman@ says that you can also launch Chrome with the `--wait-for-debugger`
+      command line flag, which sounds similar to the `--renderer-startup-dialog` flag
+
 
 ## Testing
 

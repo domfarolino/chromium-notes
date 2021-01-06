@@ -7,7 +7,7 @@ Things related to my oh-my-zsh setup.
      the Chromium repo because `git status` takes so long, on macOS moreso
      than Linux. Running `gs` manually sometimes is a good tradeoff.
      Speaking of `gs` ...
-   - `git config oh-my-zsh.hide-info 1`
+   - `git config oh-my-zsh.hide-info 1` or `git config oh-my-zsh.hide-dirty 1` (https://github.com/ohmyzsh/ohmyzsh/issues/9576#issuecomment-755216771)
 
 ### Aliases
 

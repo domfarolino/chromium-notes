@@ -20,4 +20,6 @@ set smartindent
 set incsearch
 
 # set nosmartindent
+
+autocmd BufEnter *.bs :setlocal filetype=html
 ```

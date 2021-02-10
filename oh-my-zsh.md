@@ -19,6 +19,11 @@ alias zreload="source ~/.zshrc"
 alias gs="git status"
 ```
 
+### Themes
+
+I use the `maran` theme, which replaces "robbyrussell" in `~/.zshrc`. On macOS I use the terminal theme "Novel",
+which has a default background color of `#DFDBC4`, which I override the default Linux terminal background color with for consistency.
+
 ### `~/.zshrc`
 
 ```

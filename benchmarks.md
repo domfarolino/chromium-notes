@@ -19,7 +19,7 @@ Running benchmarks locally is largely automated, but sometimes it is useful to
 pause a benchmark, open DevTools, and manually inspect things in the DOM, the
 console, or the networking tab for example. A hacky way to do this is to open
 `third_party/catapult/telemetry/telemetry/internal/story_runner.py`, and add
-the following lines after `L141`:
+the following lines [after `L141`](https://source.chromium.org/chromium/_/chromium/catapult.git/+/c5ac2a64a6688f72cd857b2f6f3a01d7379ae83d:telemetry/telemetry/internal/story_runner.py;l=152):
 
 ```
 print("State RunStory")

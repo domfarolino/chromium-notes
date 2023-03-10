@@ -11,13 +11,7 @@ Things related to my oh-my-zsh setup.
 
 ### Aliases
 
-File: `~/.oh-my-zsh/custom/aliases.zsh`
-
-``` sh
-alias cl="clear;ls"
-alias zreload="source ~/.zshrc"
-alias gs="git status"
-```
+See https://github.com/domfarolino/dotfiles/tree/master/.oh-my-zsh.
 
 ### Themes
 
@@ -25,11 +19,6 @@ I use the `maran` theme, which replaces "robbyrussell" in `~/.zshrc`. On macOS I
 which has a default background color of `#DFDBC4`, which I override the default Linux terminal background color
 with for consistency.
 
-Some information on the Novel theme can be found [here](https://github.com/lysyi3m/macos-terminal-themes/blob/master/screenshots/novel.png).
+Some information on the Novel theme can be found here:
 
-### `~/.zshrc`
-
-```
-# Probably more from my personal laptop that I could put here...
-goma_ctl ensure_start
-```
+[![novel](https://raw.githubusercontent.com/lysyi3m/macos-terminal-themes/master/screenshots/novel.png)](https://github.com/lysyi3m/macos-terminal-themes/blob/master/screenshots/novel.png)

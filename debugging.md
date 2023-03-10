@@ -55,8 +55,8 @@ machines throughout the day, so I use `screen`. See the following links for tips
 on using `screen`: https://linuxize.com/post/how-to-use-linux-screen/.
 
 ```sh
-sudo -i
-echo 0 > /proc/sys/kernel/yama/ptrace_scope
+$ sudo -i
+$ echo 0 > /proc/sys/kernel/yama/ptrace_scope
 ```
 
 See https://stackoverflow.com/questions/22749015/cannot-debug-with-gdb-in-ubuntu

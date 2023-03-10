@@ -4,13 +4,11 @@
 
 ## Building
 
-#### GN Args / Build Configuration
-
  - [Linux Build Instructions](https://chromium.googlesource.com/chromium/src/+/master/docs/linux/build_instructions.md)
  - [macOS Build Instructions](https://chromium.googlesource.com/chromium/src/+/master/docs/mac_build_instructions.md)
  - [GN build configuration docs](https://www.chromium.org/developers/gn-build-configuration)
 
-My GN args:
+#### GN Args / Build Configuration
 
 ```
 # Set build arguments here. See `gn help buildargs`.

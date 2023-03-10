@@ -28,6 +28,10 @@ enable_nacl = false
 $ mv ~/Downloads/e6090d1.diff.base64 ../patch-name.diff.base64
 $ base64 --decode ../patch-name.diff.base64 > patch.diff
 $ scp patch.diff farolino.c.googlers.com:/usr/local/google/home/domfarolino/Desktop/Git/chromium/
+
+# On remote machine:
+$ git apply ../patch.diff
+$ git cl issue XXXXXX
 ```
 
 #### Common commands and targets

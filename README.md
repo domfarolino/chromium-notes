@@ -76,3 +76,4 @@ See [debugging.md](./debugging.md).
 
  - [benchmarks.md](./benchmarks.md)
  - [oh-my-zsh.md](./oh-my-zsh.md)
+ - [vim.md](./vim.md)

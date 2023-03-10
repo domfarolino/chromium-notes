@@ -69,3 +69,6 @@ See [testing.md](./testing.md).
 ## Debugging
 
 See [debugging.md](./debugging.md).
+
+## Misc
+ - [oh-my-zsh.md](./oh-my-zsh.md)

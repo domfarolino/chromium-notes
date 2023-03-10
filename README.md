@@ -75,5 +75,6 @@ See [debugging.md](./debugging.md).
 ## Misc
 
  - [benchmarks.md](./benchmarks.md)
+ - [cs-searching.md](./cs-searching.md)
  - [oh-my-zsh.md](./oh-my-zsh.md)
  - [vim.md](./vim.md)

@@ -1,5 +1,3 @@
-# Chromium notes
-
 ![Chrome logo](https://logodownload.org/wp-content/uploads/2017/05/google-chrome-logo-1.png)
 
 ## Building

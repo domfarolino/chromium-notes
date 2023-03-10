@@ -76,5 +76,7 @@ See [debugging.md](./debugging.md).
 
  - [benchmarks.md](./benchmarks.md)
  - [cs-searching.md](./cs-searching.md)
+ - [flags.md](./flags.md)
+ - [git-grep-substitute.md](./git-grep-substitute.md)
  - [oh-my-zsh.md](./oh-my-zsh.md)
  - [vim.md](./vim.md)

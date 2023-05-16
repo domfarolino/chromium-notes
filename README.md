@@ -35,7 +35,7 @@ $ git cl issue XXXXXX
 #### Common commands and targets
 
 ```sh
-$ git rebase-update && gclient sync
+$ git rebase-update && gclient sync -D
 $ autoninja -C out/Default chrome blink_tests browser_tests content_browsertests net_unittests
 # All targets I commonly build:
 $ autoninja -C out/Debug chrome browser_tests content_browsertests components_browsertests headless_browsertests interactive_ui_tests content_unittests blink_tests blink_platform_unittests unit_tests url_unittests services_unittests webkit_unit_tests chromedriver_py_tests

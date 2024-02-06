@@ -24,7 +24,7 @@ enable_nacl = false
 <Download patch from Gerrit site>
 
 $ mv ~/Downloads/e6090d1.diff.base64 ../patch-name.diff.base64
-$ base64 --decode ../patch-name.diff.base64 > patch.diff
+$ base64 --decode -i ../patch-name.diff.base64 > patch.diff
 $ scp patch.diff farolino.c.googlers.com:/usr/local/google/home/domfarolino/Desktop/Git/chromium/
 
 # On remote machine:
